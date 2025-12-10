@@ -186,7 +186,7 @@ main {
 
         background-color: var(--bg-secondary);
 
-        padding: 8vw calc(100vh - 84vh);
+        padding: calc(100vh - 84vh) 8vw;
 
         display: flex;
         flex-direction: column;
