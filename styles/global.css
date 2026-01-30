@@ -29,6 +29,8 @@ html {
     --text-title: #014950;
     --text-light: #F6F6F6;
     --text-dark: #0E0E10;
+
+    --toggle-open: #D94A4A;
 }
 
 body {
@@ -37,6 +39,8 @@ body {
     color: var(--text-dark);
     font-size: 1.6rem;
     line-height: 1.55;
+
+    transition: ease .4s;
 }
 
 h1 {
@@ -81,7 +85,7 @@ ol {
 
 aside {
     height: 100vh;
-    width: max(28rem, 32vw);
+    width: 28vw;
 
     background-color: var(--bg-secondary);
 
@@ -90,6 +94,15 @@ aside {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
+
+    position: fixed;
+    left: 0;
+    top: 0;
+
+    transform: translateX(-100%);
+    opacity: 0;
+
+    transition: transform .3s ease, opacity .2s ease;
 
     nav {
         height: 100%;
@@ -128,11 +141,45 @@ aside {
     }
 }
 
+i#asideToggle {
+    color: var(--text-brand);
+
+    position: fixed;
+    left: 1.6rem;
+    top: 1.2rem;
+    z-index: 1;
+
+    cursor: pointer;
+
+    transition: ease .3s;
+}
+
+i#asideToggle.fa-bars:hover {
+    transform: rotate(180deg);
+    color: var(--text-title);
+}
+
+i#asideToggle.fa-xmark:hover {
+    transform: rotate(180deg);
+    color: var(--toggle-open);
+}
+
+aside.open {
+    transform: translateX(0);
+    opacity: 1;
+}
+
+body.aside-open main {
+  margin-left: 28vw;
+}
+
 main {
     width: 100%;
 
     margin-top: 5.8rem;
     padding: 0 2rem;
+
+    transition: margin-left .3s ease;
 }
 
 main header {
@@ -226,7 +273,7 @@ main article {
         -webkit-background-clip: text;
         -webkit-text-fill-color: transparent;
     }
-    
+
 }
 
 /* @media (width <=768px) {
