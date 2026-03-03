@@ -123,6 +123,7 @@ aside {
         a:hover {
             color: var(--text-dark);
             background-color: var(--text-brand);
+            margin-left: -1.2rem;
 
             sup {
                 color: var(--text-light);
@@ -174,6 +175,11 @@ aside.open {
 body.aside-open main {
   margin-left: 28vw;
   padding-inline: 2.4vw;
+}
+
+nav a.active {
+  color: var(--text-light);
+  margin-left: -1.2rem;
 }
 
 main {

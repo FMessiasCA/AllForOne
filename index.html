@@ -17,21 +17,21 @@
     integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw=="
     crossorigin="anonymous" referrerpolicy="no-referrer" />
 
-  <script src="./scripts/index.js" defer></script>
+  <script type="module" src="./scripts/main.js"></script>
 </head>
 
 <body>
 
-  <i id="asideToggle" class="fa-solid fa-bars"></i>
+  <i id="asideToggle" class="fa-solid fa-bars" aria-hidden="true"></i>
 
   <div class="wrapper">
-    <aside id=""> <!-- id="showAside" -->
+    <aside id="site-aside" aria-label="Menu lateral">
       <nav>
-        <a href="./index.html">Home</a>
-        <a href="#">Developer Lab</a>
-        <a href="#">Study Camp</a>
-        <a href="#">Work<sup>3</sup></a>
-        <a href="#">Hobbies</a>
+        <a href="#/" data-route>Home</a>
+        <a href="#/developer" data-route>Developer Lab</a>
+        <a href="#/study" data-route>Study Camp</a>
+        <a href="#/work" data-route>Work<sup>3</sup></a>
+        <a href="#/hobbies" data-route>Hobbies</a>
       </nav>
 
       <p>
@@ -41,11 +41,12 @@
 
     <main>
       <header>
-        <h1>
+        <h1> <a href="#/">
           <span class="brand">All</span>For<span class="brand">One</span>
+        </a>
         </h1>
 
-        <h2>
+        <h2 id="page-subtitle">
           <span class="brand">Everything</span>
           connected in
           <span class="brand">one</span>
@@ -58,73 +59,9 @@
         </form>
       </header>
 
-      <article>
-        <section class="mostSearch">
-          <h3>Mais utilizados</h3>
-
-          <ol role="list">
-            <li>
-              <img src="https://www.google.com/s2/favicons?domain=youtube.com" alt="Logo do YouTube">
-              <a href="https://www.youtube.com/" require>YouTube</a>
-            </li>
-
-            <li>
-              <img src="https://www.google.com/s2/favicons?domain=rocketseat.com.br" alt="Logo da RocketSeat">
-              <a href="https://app.rocketseat.com.br/">RocketSeat</a>
-            </li>
-
-            <li>
-              <img src="https://www.google.com/s2/favicons?domain=https://mail.google.com/mail/u/0/#inbox"
-                alt="Logo do Gmail">
-              <a href="https://mail.google.com/mail/u/1/#inbox">Gmail</a>
-            </li>
-
-            <li>
-              <img src="https://www.google.com/s2/favicons?domain=chatgpt.com/" alt="Logo do ChatGPT">
-              <a href="https://chatgpt.com/">ChatGPTeta</a>
-            </li>
-
-            <li>
-              <img src="https://www.google.com/s2/favicons?domain=https://aulas.descomplica.com.br"
-                alt="Logo da Descomplica">
-              <a href="https://aulas.descomplica.com.br/graduacao/engenharia-da-computacao/">Faculdade (Des)Complica</a>
-            </li>
-          </ol>
-        </section>
-
-        <section class="interestingSearch">
-          <h3>Sempre dando uma olhada</h3>
-
-          <ol role="list">
-            <li>
-              <img src="https://www.google.com/s2/favicons?domain=github.com" alt="Logo do Github">
-              <a href="https://github.com/FMessiasCA">Github</a>
-            </li>
-
-            <li>
-              <img src="https://www.google.com/s2/favicons?domain=grok.com" alt="Logo do Grok">
-              <a href="https://grok.com/">Grok</a>
-            </li>
-
-            <li>
-              <img src="https://www.google.com/s2/favicons?domain=docs.google.com/forms/" alt="Logo do Google Forms">
-              <a href="https://docs.google.com/forms/u/0/">Google Forms</a>
-            </li>
-
-            <li>
-              <img src="https://www.google.com/s2/favicons?domain=pinterest.com" alt="Logo do Pinterest">
-              <a href="https://br.pinterest.com/">Pinterest</a>
-            </li>
-
-            <li>
-              <img src="https://www.google.com/s2/favicons?domain=playcode.io" alt="Logo do Playcode">
-              <a href="https://playcode.io/new">Playcode</a>
-            </li>
-          </ol>
-        </section>
-      </article>
+      <article id="app"></article>
     </main>
   </div>
-</body>
 
+</body>
 </html>
