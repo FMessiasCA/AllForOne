@@ -43,22 +43,8 @@ body {
     transition: ease .4s;
 }
 
-h1 {
-    font-family: var(--font-family-brand);
-    font-size: clamp(3.2rem, 6vw, 5.6rem);
-    font-weight: 700;
-    color: var(--text-dark);
-}
-
 .brand {
     color: var(--text-brand);
-}
-
-h2 {
-    font-family: var(--font-family-brand);
-    font-size: clamp(1.6rem, 2vw, 1.8rem);
-    font-weight: 500;
-    color: var(--text-dark);
 }
 
 a {
@@ -77,12 +63,12 @@ ol {
 }
 
 .wrapper {
-    height: 100vh;
     width: 100vw;
 
     display: flex;
 }
 
+/* Aside */
 aside {
     height: 100vh;
     width: 28vw;
@@ -131,6 +117,15 @@ aside {
         }
     }
 
+    nav a.active {
+        color: var(--text-light);
+        font-weight: 800;
+    }
+
+    nav a.active:hover {
+        color: var(--text-dark);
+    }
+
     p {
         color: var(--text-light);
         font-size: 1.35rem;
@@ -173,19 +168,15 @@ aside.open {
 }
 
 body.aside-open main {
-  margin-left: 28vw;
-  padding-inline: 2.4vw;
+    margin-left: 28vw;
+    padding-inline: 2.4vw;
 }
 
-nav a.active {
-  color: var(--text-light);
-  margin-left: -1.2rem;
-}
-
+/* Main */
 main {
     width: 100%;
 
-    margin-top: 5.8rem;
+    margin-top: 3.2rem;
     padding-inline: 4vw;
 
     transition: margin-left .3s ease;
@@ -193,10 +184,21 @@ main {
 
 main header {
     text-align: center;
-    margin-bottom: 3.2rem;
+    margin-bottom: 4.8rem;
+
+     h1 a {
+        font-family: var(--font-family-brand);
+        font-size: clamp(1.6rem, 3vw, 4rem);
+        font-weight: 700;
+        color: var(--text-dark);
+    }
 
     h2 {
-        margin-block: .8rem 5.6rem;
+        margin-block: .8rem 4.8rem;
+        font-family: var(--font-family-brand);
+        font-size: 2.4rem;
+        font-weight: 400;
+        color: var(--text-dark);
     }
 
     form input {
@@ -284,55 +286,3 @@ main article {
     }
 
 }
-
-/* @media (width <=768px) {
-    .wrapper {
-        display: block;
-    }
-
-    aside {
-        height: 100vh;
-        width: 100vw;
-
-        background-color: var(--bg-secondary);
-
-        padding: calc(100vh - 84vh) 8vw;
-
-        display: flex;
-        flex-direction: column;
-        justify-content: space-between;
-        text-align: center;
-
-        nav {
-            height: 50vh;
-
-            display: flex;
-            flex-direction: column;
-            justify-content: space-evenly;
-            align-items: center;
-
-            color: var(--text-brand);
-
-            a {
-                font-size: 2.4rem;
-
-                padding: 0;
-                border: none;
-
-                sup {
-                    color: var(--text-light);
-                }
-            }
-
-            a:hover {
-                color: inherit;
-                background: none;
-            }
-
-        }
-        
-        p {
-            font-size: 1.6rem;
-        }
-    }
-} 
