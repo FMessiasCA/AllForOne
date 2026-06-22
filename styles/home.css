@@ -3,9 +3,7 @@ main header {
     justify-content: space-between;
     align-items: center;
 
-    padding: 1.6rem 2rem 0;
-
-    border: solid 1px var(--border);
+    border-bottom: solid 1px var(--border);
 }
 
 header .titleSubtitle {

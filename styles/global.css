@@ -1,52 +1,91 @@
  /* IMPORTS */
-@import url(./home.css);
+ @import url(./home.css);
 
-/* GLOBAL */
-html {
-    font-size: 62.5%;
-    
-    box-sizing: border-box;
+ /* GLOBAL */
+ html {
+     font-size: 62.5%;
 
-    -webkit-font-smoothing: antialiased;
-    -moz-osx-font-smoothing: grayscale;
-}
+     box-sizing: border-box;
 
-*,
-*::before,
-*::after {
-    margin: 0;
-    padding: 0;
+     -webkit-font-smoothing: antialiased;
+     -moz-osx-font-smoothing: grayscale;
+ }
 
-    box-sizing: inherit;
-}
+ *,
+ *::before,
+ *::after {
+     margin: 0;
+     padding: 0;
 
-:root {  
-    --font-display: 'Space Grotesk', sans-serif;
-    --font-body:    'DM Sans', sans-serif;
-    --font-mono:    'Space Mono', monospace;
+     box-sizing: inherit;
+ }
 
-    --r-sm:  4px;
-    --r-md:  8px;
-    --r-lg:  12px;
+ :root {
+     --font-display: 'Space Grotesk', sans-serif;
+     --font-body: 'DM Sans', sans-serif;
+     --font-mono: 'Space Mono', monospace;
 
-    --bg-base:    #0D1117;
-    --bg-surface: #161B22;
-    --bg-elevate: #21262D;
-    --border:     #30363D;
-    --brand:     #7EE787;
-    --info:       #58A6FF;
-    --warn:       #F0883E;
-    --star:       #E3B341;
-    --text-hi:    #C9D1D9;
-    --text-lo:    #8B949E;
-}
+     --bg-base: #0D1117;
+     --bg-surface: #161B22;
+     --bg-elevate: #21262D;
+     --border: #30363D;
+     --brand: #7EE787;
+     --info: #58A6FF;
+     --warn: #F0883E;
+     --star: #E3B341;
+     --text-hi: #C9D1D9;
+     --text-lo: #8B949E;
+ }
 
-body {
-    min-height: 100vh;
+ body {
+     min-height: 100vh;
 
-    font-family: var(--font-body);
-    font-size: 1.6rem;
-    color: var(--text-lo);
+     font-family: var(--font-body);
+     font-size: 1.6rem;
+     color: var(--text-lo);
 
-    background-color: var(--bg-base);
-}
+     background-color: var(--bg-base);
+ }
+
+ main {
+     padding: 1.6rem 2rem 0;
+ }
+
+ form {
+    padding-block: 1.4rem;
+
+     input {
+         font-family: var(--font-body);
+         font-size: 1.6rem;
+         color: var(--text-hi);
+
+         background-color: var(--bg-surface);
+         border: 1px solid var(--border);
+         border-radius: 12px;
+
+         padding: 1.2rem .8rem;
+         width: 100%;
+     }
+
+     input::placeholder {
+        color: var(--text-lo);
+     }
+
+     input:focus {
+        outline: none;
+     }
+
+     .searchBox {
+         position: relative;
+     }
+
+     .searchBox span {
+        font-family: var(--font-mono);
+        font-size: 1.4rem;
+
+         position: absolute;
+         right: 1.2rem;
+         top: 50%;
+         transform: translateY(-50%);
+     }
+ }
