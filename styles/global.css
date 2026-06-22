@@ -1,3 +1,52 @@
+ /* IMPORTS */
+@import url(./home.css);
+
+/* GLOBAL */
+html {
+    font-size: 62.5%;
+    
+    box-sizing: border-box;
+
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+*,
+*::before,
+*::after {
+    margin: 0;
+    padding: 0;
+
+    box-sizing: inherit;
+}
+
+:root {  
+    --font-display: 'Space Grotesk', sans-serif;
+    --font-body:    'DM Sans', sans-serif;
+    --font-mono:    'Space Mono', monospace;
+
+    --r-sm:  4px;
+    --r-md:  8px;
+    --r-lg:  12px;
+
+    --bg-base:    #0D1117;
+    --bg-surface: #161B22;
+    --bg-elevate: #21262D;
+    --border:     #30363D;
+    --brand:     #7EE787;
+    --info:       #58A6FF;
+    --warn:       #F0883E;
+    --star:       #E3B341;
+    --text-hi:    #C9D1D9;
+    --text-lo:    #8B949E;
+}
+
 body {
-    background-color: darkblue;
+    min-height: 100vh;
+
+    font-family: var(--font-body);
+    font-size: 1.6rem;
+    color: var(--text-lo);
+
+    background-color: var(--bg-base);
 }
