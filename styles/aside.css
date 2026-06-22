@@ -1,18 +1,26 @@
 aside {
     width: 40vw;
     padding: 2.4rem 1.6rem;
+
+    transition: ease .4s;
 }
 
 aside button {
-    border: 1px solid var(--border);
-    border-radius: 1.2rem;
-    
-    color: var(--text-hi);
-    font-size: 2.4rem;
-
     width: 100%;
     padding: .6rem;
     margin-bottom: 2.4rem;
+
+    font-size: 2.4rem;
+    color: var(--text-hi);
+    cursor: pointer;
+
+    border: 1px solid var(--border);
+    border-radius: 1.2rem;
+    transition: ease .4s;
+}
+
+aside button:hover {
+    background-color: var(--bg-surface);
 }
 
 aside nav .brandTitle {
@@ -21,21 +29,43 @@ aside nav .brandTitle {
     margin-bottom: 2.4rem;
 }
 
-aside nav ul li{
+aside nav ul li a {
     display: flex;
     align-items: center;
     gap: .8rem;
 
-    
+
     border: 1px solid var(--border);
     border-radius: 12px;
     padding: .8rem;
 
-    transition: ease .2s;
     margin-bottom: 1.6rem;
+    transition: ease .2s;
 }
 
-aside ul li#a, li:hover {
+aside ul li #a,
+a:hover {
     background-color: var(--bg-surface);
     color: var(--text-hi);
+}
+
+.asideClosed {
+    width: 8rem;
+
+    button {
+        padding: .4rem;
+    }
+
+    .brandTitle {
+        display: none;
+    }
+
+    nav a {
+        display: block;
+        text-align: center;
+    }
+
+    span {
+        display: none;
+    }
 }
