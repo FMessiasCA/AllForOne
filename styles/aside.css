@@ -1,0 +1,41 @@
+aside {
+    width: 40vw;
+    padding: 2.4rem 1.6rem;
+}
+
+aside button {
+    border: 1px solid var(--border);
+    border-radius: 1.2rem;
+    
+    color: var(--text-hi);
+    font-size: 2.4rem;
+
+    width: 100%;
+    padding: .6rem;
+    margin-bottom: 2.4rem;
+}
+
+aside nav .brandTitle {
+    font-size: 2rem;
+
+    margin-bottom: 2.4rem;
+}
+
+aside nav ul li{
+    display: flex;
+    align-items: center;
+    gap: .8rem;
+
+    
+    border: 1px solid var(--border);
+    border-radius: 12px;
+    padding: .8rem;
+
+    transition: ease .2s;
+    margin-bottom: 1.6rem;
+}
+
+aside ul li#a, li:hover {
+    background-color: var(--bg-surface);
+    color: var(--text-hi);
+}

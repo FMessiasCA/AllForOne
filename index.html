@@ -14,34 +14,69 @@
     <link
         href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&family=Space+Grotesk:wght@300..700&family=Space+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap"
         rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/@tabler/icons-webfont@3.44.0/dist/tabler-icons.min.css" rel="stylesheet">
 </head>
 
 <body>
-    <main>
-        <header>
-            <div class="titleSubtitle">
-                <h1>Home</h1>
-                <p>everything connected in one place</p>
-            </div>
+    <div class="wrapper">
+        <main>
+            <header>
+                <div class="titleSubtitle">
+                    <h1>Home</h1>
+                    <p>everything connected in one place</p>
+                </div>
+    
+                <div id="clockAndCalendar">
+                    <div id="clock"> 23:00</div>
+                    <div id="calendar">DOM 21 JUN</div>
+                </div>
+            </header>
+    
+            <form action="https://google.com/search" method="get">
+                <div class="searchBox">
+                    <input type="text" name="q" placeholder="Pesquisar no Google...">
+                    <span>↵ Enter</span>
+                </div>
+            </form>
 
-            <div id="clockAndCalendar">
-                <div id="clock"> 23:00</div>
-                <div id="calendar">DOM 21 JUN</div>
+            <div class="brandTitle">
+                All<span>For</span>One
             </div>
-        </header>
+        </main>
+    
+        <aside>
+            <button id="asideToogle">
+                <i class="ti ti-menu-4"></i>
+            </button>
 
-        <form action="https://google.com/search" method="get">
-            <div class="searchBox">
-                <input type="text" name="q" placeholder="Pesquisar no Google...">
-                <span>↵ Enter</span>
-            </div>
-        </form>
-    </main>
-
-    <aside>
-        <nav>
-        </nav>
-    </aside>
+            <nav>
+                <div class="brandTitle">All<span>For</span>One</div>
+                
+                <ul>
+                    <li id="a">
+                        <i class="ti ti-home"></i>
+                        <a href="#">Home</a>
+                    </li>
+                    <li>
+                        <i class="ti ti-prompt"></i>
+                        <a href="#">Developer Lab</a>
+                    </li>
+                    <li>
+                        <i class="ti ti-book"></i>
+                        <a href="#">Study Camp</a>
+                    </li>
+                    <li>
+                        <i class="ti ti-briefcase"></i>
+                        <a href="#">Work³</a>
+                    </li>
+                    <li>
+                        <i class="ti ti-device-gamepad-2"></i>
+                        <a href="#">Hobbies</a>
+                    </li>
+                </ul>
+            </nav>
+        </aside>
+    </div>
 </body>
 
 </html>
