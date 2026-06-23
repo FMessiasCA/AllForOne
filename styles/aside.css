@@ -43,7 +43,7 @@ aside nav ul li a {
     transition: ease .2s;
 }
 
-aside ul li #a,
+aside ul li .selected,
 a:hover {
     background-color: var(--bg-surface);
     color: var(--text-hi);
