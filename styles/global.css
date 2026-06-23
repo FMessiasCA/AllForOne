@@ -1,6 +1,8 @@
 /* IMPORTS */
-@import url(./home.css);
 @import url(./aside.css);
+@import url(./header.css);
+
+@import url(./home.css);
 
 /* GLOBAL */
 html {
@@ -82,7 +84,7 @@ button {
 }
 
 main {
-    width: 100%;
+    width: 100vw;
     height: 100vh;
     padding: 1.6rem 2rem 0;
 

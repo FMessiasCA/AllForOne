@@ -44,7 +44,7 @@ aside nav ul li a {
 }
 
 aside ul li .selected,
-a:hover {
+aside ul li a:hover {
     background-color: var(--bg-surface);
     color: var(--text-hi);
 }

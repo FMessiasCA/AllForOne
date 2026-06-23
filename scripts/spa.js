@@ -16,12 +16,14 @@ export class SPA {
         const html = await res.text();
 
         this.root.innerHTML = html;
+
+        this.bindLinks();
     };
 
     start() {
         window.addEventListener('popstate', () => {
-              this.render();
-              updateSelectedLink(window.location.pathname);
+            this.render();
+            updateSelectedLink(window.location.pathname);
         });
         this.render();
     };
@@ -29,6 +31,19 @@ export class SPA {
     navigate(path) {
         window.history.pushState({}, '', path);
         this.render();
+    }
+
+    bindLinks() {
+        document.querySelectorAll('#app a[href^="/"]').forEach(link => {
+            link.addEventListener('click', (e) => {
+                e.preventDefault();
+
+                const path = link.getAttribute('href');
+
+                this.navigate(path);
+                updateSelectedLink(path);
+            });
+        });
     }
 }
 
